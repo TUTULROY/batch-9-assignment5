@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="bg-white">
     <header>
@@ -55,7 +56,7 @@
                     <h1 class="text-5xl font-bold text-white">End-to-End Travel </h1>
                     <h1 class="text-5xl font-bold text-green-600">P Paribahan</h1>
                     <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button class="btn btn-success">Buy Tickets</button>
+                    <button onclick="goTicketSection()" id="banner-Btn" class="btn btn-success">Buy Tickets</button>
                   </div>
                 </div>
               </div>
@@ -108,9 +109,216 @@
           </section>
 
         <!-- third section  -->
+        <section class="">
+            <section class="card-body">
+                <div class="text-center mb-10">
+                    <h1 class="text-black font-bold text-4xl mb-5">P.H Paribahan</h1>
+                    <p>Your Fast, Reliable, and Trusted Courier Service Partner!</p>
+                </div>
+                <div class="flex justify-between gap-4">
+                    <div>
+                        <div class="flex justify-between">
+                            <div class="flex gap-3">
+                                <div>
+                                    <img src="images/bus-logo.png" alt="">
+                                </div>
+                                <div>
+                                    <h1 class="text-black font-bold">Greenline Paribahan</h1>
+                                    <h3>Coach-009-WEB ! AC_Business</h3>
+                                </div>
+                            </div>
+                            <div>
+                                <div class=" bg-[#1DD10026] px-5 py-2 rounded-xl flex gap-3">
+                                    <img class="w-max h-max" src="images/seat-green.png" alt="">
+                                    <h1><span id="seats-left">8</span> Seats left</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body bg-[#F7F8F8] rounded-3xl mt-5">
+                            <div class="flex justify-between">
+                                <h1>Route</h1>
+                                <h1>Dhaka - Sylhet</h1>
+                            </div>
+                            <div class="flex justify-between">
+                                <h1>Departure Time</h1>
+                                <h1>9:00 PM</h1>
+                            </div>
+                            <div class="grid grid-cols-3 gap-5">
+                                <button class="btn bg-[#d2d4da] text-black">Boarding Point - Laxmipur</button>
+                                <button class="btn bg-[#d2d4da] text-black">Dropping Point - Bogura</button>
+                                <button class="btn bg-[#d2d4da] text-black">Est. Time - 11 Hour</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-1 justify-center items-center">
+                        <div>
+                            <img src="images/fare.png" alt="">
+                            <h1 class="font-bold text-3xl text-black">550 Taka</h1>
+                            <h3 class="text-xl">Per Seat</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="Ticket-Section" class="card-body mb-32">
+                <div class="flex justify-between">
+                    <div>
+                        <h1 class="font-ra font-semibold text-[24px] mb-10">Select Your Seat</h1>
+                        <div>
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <img src="images/seat-gray.png" alt="">
+                                    <h3>Available</h3>
+                                </div>
+                                <div class="flex mr-20">
+                                    <img src="images/seat-green-filled.png" alt="">
+                                    <h3>Selected</h3>
+                                </div>
+                            </div>
+                            <div class="flex justify-end mr-20 mb-5">
+                                <button class="btn"><img src="images/wheel.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-x-20">
+                            <div>
+                                <div class="grid grid-cols-3 gap-5">
+                                    <h1 class="flex justify-center items-center">A</h1>
+                                    <button id="sit-a1" onclick="seatChoiceA1() ; toggleSit(1)"
+                                        class="btn w-24 sit-button "><span>A1</span></button>
+                                    <button id="sit-a2" onclick="seatChoiceA2() ; toggleSit(2)" class="btn w-24 sit-button"><span>A2</span></button>
+                                </div>
+                                <div class="grid grid-cols-3 gap-5 mt-5">
+                                    <h1 class="flex justify-center items-center">B</h1>
+                                    <button id="sit-b1" onclick="seatChoiceB1() ; toggleSit(3)"
+                                        class="btn w-24 sit-button"><span>B1</span></button>
+                                    <button id="sit-b2" onclick="seatChoiceB2() ; toggleSit(4)" class="btn w-24 sit-button"><span>B2</span></button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="grid grid-cols-3 gap-5">
+                                    <button id="sit-a3" onclick="seatChoiceA3() ; toggleSit(5)" class="btn w-24 sit-button"><span>A3</span></button>
+                                    <button id="sit-a4" onclick="seatChoiceA4() ; toggleSit(6)" class="btn w-24 sit-button"><span>A4</span></button>
+                                </div>
+                                <div class="grid grid-cols-3 gap-5 mt-5">
+                                    <button id="sit-b3" onclick="seatChoiceB3() ; toggleSit(7)" class="btn w-24 sit-button"><span>B3</span></button>
+                                    <button id="sit-b4" onclick="seatChoiceB4() ; toggleSit(8)" class="btn w-24 sit-button"><span>B4</span></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="grid grid-cols-2 gap-x-20">
+                            <div>
+                                <div class="grid grid-cols-3 gap-5 mt-5">
+                                    <h1 class="flex justify-center items-center">C</h1>
+                                    <button id="sit-c1" onclick="seatChoiceC1() ; toggleSit(9)"
+                                        class="btn w-24 sit-button "><span>C1</span></button>
+                                    <button id="sit-c2" onclick="seatChoiceC2() ; toggleSit(10)" class="btn w-24 sit-button"><span>C2</span></button>
+                                </div>
+                                <div class="grid grid-cols-3 gap-5 mt-5">
+                                    <h1 class="flex justify-center items-center">D</h1>
+                                    <button id="sit-d1" onclick="seatChoiceD1() ; toggleSit(11)"
+                                        class="btn w-24 sit-button"><span>D1</span></button>
+                                    <button id="sit-d2" onclick="seatChoiceD2() ; toggleSit(12)" class="btn w-24 sit-button"><span>D2</span></button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="grid grid-cols-3 gap-5 mt-5">
+                                    <button id="sit-c3" onclick="seatChoiceC3() ; toggleSit(13)" class="btn w-24 sit-button"><span>C3</span></button>
+                                    <button id="sit-c4" onclick="seatChoiceC4() ; toggleSit(14)" class="btn w-24 sit-button"><span>C4</span></button>
+                                </div>
+                                <div class="grid grid-cols-3 gap-5 mt-5">
+                                    <button id="sit-d3" onclick="seatChoiceD3() ; toggleSit(15)" class="btn w-24 sit-button"><span>D3</span></button>
+                                    <button id="sit-d4" onclick="seatChoiceD4() ; toggleSit(16)" class="btn w-24 sit-button"><span>D4</span></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="font-ra font-semibold text-[24px] mb-10">Select Your Seat</h1>
+                        <div class="card bg-[#F7F8F8] text-black">
+                            <div class="card-body">
+                                <div class=" gap-28 grid grid-cols-3 font-medium">
+                                    <h1>Seat <span id="seat-add"
+                                            class="bg-[#1DD100] text-white font-bold rounded-md">0</span>
+                                    </h1>
+                                    <h1>Class</h1>
+                                    <h1>Price</h1>
+                                </div>
+
+                                <div id="A1"
+                                    class=" hidden gap-28 grid grid-cols-3 text-[#03071299] font-in font-normal">
+                                    <h1>A1</h1>
+                                    <h1>Economoy</h1>
+                                    <h1 id="ticket-pice">550</h1>
+                                </div>
+                                <div id="A2"
+                                    class=" hidden gap-28 grid grid-cols-3 text-[#03071299] font-in font-normal">
+                                    <h1>A2</h1>
+                                    <h1>Economoy</h1>
+                                    <h1>550</h1>
+                                </div>
+                                <div id="A3"
+                                    class=" hidden gap-28 grid grid-cols-3 text-[#03071299] font-in font-normal">
+                                    <h1>A3</h1>
+                                    <h1>Economoy</h1>
+                                    <h1>550</h1>
+                                </div>
+                                <div id="A4"
+                                    class="hidden gap-28 grid grid-cols-3 text-[#03071299] font-in font-normal">
+                                    <h1>A4</h1>
+                                    <h1>Economoy</h1>
+                                    <h1>550</h1>
+                                </div>
+                                <div id="B1"
+                                    class="hidden gap-28 grid grid-cols-3 text-[#03071299] font-in font-normal">
+                                    <h1>B1</h1>
+                                    <h1>Economoy</h1>
+                                    <h1>550</h1>
+                                </div>
+                                <div id="B2"
+                                    class="hidden gap-28 grid grid-cols-3 text-[#03071299] font-in font-normal">
+                                    <h1>B2</h1>
+                                    <h1>Economoy</h1>
+                                    <h1>550</h1>
+                                </div>
+                                <div id="B3"
+                                    class="hidden gap-28 grid grid-cols-3 text-[#03071299] font-in font-normal">
+                                    <h1>B3</h1>
+                                    <h1>Economoy</h1>
+                                    <h1>550</h1>
+                                </div>
+                                <div id="B4"
+                                    class="hidden gap-28 grid grid-cols-3 text-[#03071299] font-in font-normal">
+                                    <h1>B4</h1>
+                                    <h1>Economoy</h1>
+                                    <h1>550</h1>
+                                </div>
+                                <div class="flex">
+                                    <h1 class="flex-1">Total Price</h1>
+                                    <h1 class="pr-12">BDT<Span id="total-price">0</Span></h1>
+                                </div>
+                                <div class="flex">
+                                    <input id="discount-input" type="text" placeholder="Have any coupon?"
+                                        class="input input-bordered w-full max-w-xs" /><button id="apply-button"
+                                        class="btn bg-[#1DD100] text-white" onclick="discount ()">Apply</button>
+                                </div>
+                                <div class="flex">
+                                    <h1 class="flex-1">Grand Price</h1>
+                                    <h1 class="pr-12">BDT<Span id="grand-price">0</Span></h1>
+                                </div>
+                                <button onclick="successSectionOn()" class="btn bg-[#1DD100] text-white">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+        </section>
 
        
     </main>
-    
+    <script src="script/utility.js"></script>
+    <script src="script/index.js"></script>
 </body>
 </html>
